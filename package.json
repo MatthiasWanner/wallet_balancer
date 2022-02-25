@@ -1,0 +1,35 @@
+{
+  "name": "wallet_balancer",
+  "version": "0.0.1",
+  "description": "Simple handler to check ERC20 wallet balances",
+  "main": "./dist/index.js",
+  "author": "Matthias Wanner",
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "dist",
+    "types"
+  ],
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -b"
+  },
+  "keywords": [
+    "crypto",
+    "blockchain",
+    "ethers",
+    "metamask",
+    "wallet"
+  ],
+  "dependencies": {
+    "ethers": "^5.5.4"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
+}
