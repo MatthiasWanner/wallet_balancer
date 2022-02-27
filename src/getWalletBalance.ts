@@ -1,34 +1,35 @@
-import { ethers, providers, utils } from 'ethers';
+import { Contract, providers, utils } from 'ethers';
+import { IContractInfos, IGetWalletBalanceArgs } from '../types';
+import { getContractinfos } from './utils';
 
-export const getWalletBalance = async (
-  contractAddress: string,
-  windowEthereum: providers.ExternalProvider
-) => {
-  // The ERC-20 Contract ABI, which is a common contract interface
-  // for tokens (this is the Human-Readable ABI format)
-  const contractAbi = [
-    // Some details about the token
-    'function symbol() view returns (string)',
-    'function decimals() view returns (uint256)',
+export const getWalletBalance = async ({
+  contractAddress,
+  windowEthereum,
+  contractType
+}: IGetWalletBalanceArgs) => {
+  try {
+    const provider = new providers.Web3Provider(windowEthereum);
 
-    // Get the account balance
-    'function balanceOf(address) view returns (uint)'
-  ];
+    // Or throw an error if not IContractInfos
+    const {
+      contract,
+      symbol,
+      decimals = 0
+    } = (await getContractinfos({
+      contractAddress,
+      provider,
+      contractType
+    })) as IContractInfos;
 
-  // The Contract object
-  const provider = new providers.Web3Provider(windowEthereum);
+    const [connectedAccount] = await provider.listAccounts();
 
-  await provider.send('eth_requestAccounts', []);
-  const contract = new ethers.Contract(contractAddress, contractAbi, provider);
-  const symbol = await contract.symbol();
-  const decimals = await contract.decimals();
+    const balance = utils.formatUnits(
+      await contract.balanceOf(connectedAccount),
+      decimals
+    );
 
-  const [connectedAccount] = await provider.listAccounts();
-
-  const balance = utils.formatUnits(
-    await contract.balanceOf(connectedAccount),
-    decimals
-  );
-
-  return { symbol, balance };
+    return { symbol, balance };
+  } catch (error) {
+    throw error;
+  }
 };
