@@ -1,7 +1,7 @@
 {
-  "name": "wallet_balancer",
+  "name": "@dc_tools/web3_utils",
   "version": "0.0.1",
-  "description": "Simple handler to check ERC20 wallet balances",
+  "description": "Package to interact with ERC20 and ERC21 contracts using ethers.js",
   "main": "./dist/index.js",
   "author": "Matthias Wanner",
   "license": "MIT",
