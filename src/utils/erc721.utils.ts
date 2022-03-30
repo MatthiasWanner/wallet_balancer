@@ -1,6 +1,6 @@
 import { providers, Contract } from 'ethers';
 import { ERC721ContractInfos } from '../../types';
-import ERC721Abi from '../constants/erc20_abi.constants.json';
+import ERC721Abi from '../constants/erc20_abi.constants';
 
 /**
  * @description Get the infos of an ERC21 NFT contract
