@@ -30,6 +30,7 @@
     "ethers": "^5.5.4"
   },
   "devDependencies": {
+    "@tsconfig/node16": "^1.0.2",
     "typescript": "^4.5.5"
   }
 }
