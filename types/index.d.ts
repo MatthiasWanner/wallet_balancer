@@ -29,4 +29,5 @@ export interface ISendErc20TokensArgs {
   contractAddress: string;
   windowEthereum: providers.ExternalProvider;
   amount: number;
+  receiverAddress: string;
 }
