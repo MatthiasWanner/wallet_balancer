@@ -1,6 +1,6 @@
 import { providers, Contract } from 'ethers';
 import { ERC20ContractInfos } from '../../types';
-import { ERC20Abi } from '../constants/abis.constants';
+import ERC20Abi from '../constants/erc20_abi.constants';
 
 /**
  * @description Get the infos of an ERC20 token contract
