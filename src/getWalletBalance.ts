@@ -1,4 +1,4 @@
-import { Contract, providers, utils } from 'ethers';
+import { providers, utils } from 'ethers';
 import { IContractInfos, IGetWalletBalanceArgs } from '../types';
 import { getContractinfos } from './utils';
 
