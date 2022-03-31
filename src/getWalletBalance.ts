@@ -1,12 +1,16 @@
 import { providers, utils } from 'ethers';
-import { IContractInfos, IGetWalletBalanceArgs } from '../types';
+import {
+  IContractInfos,
+  IGetWalletBalanceArgs,
+  IWalletTokenBalance
+} from '../types';
 import { getContractinfos } from './utils';
 
 export const getWalletBalance = async ({
   contractAddress,
   windowEthereum,
   contractType
-}: IGetWalletBalanceArgs) => {
+}: IGetWalletBalanceArgs): Promise<IWalletTokenBalance> => {
   try {
     const provider = new providers.Web3Provider(windowEthereum);
 

@@ -31,3 +31,8 @@ export interface ISendErc20TokensArgs {
   amount: number;
   receiverAddress: string;
 }
+
+export interface IWalletTokenBalance {
+  symbol: string;
+  balance: string;
+}
