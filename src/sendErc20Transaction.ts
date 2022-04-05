@@ -19,7 +19,6 @@ export const sendErc20Transaction = async (
   const signer = provider.getSigner();
   const contract = new ethers.Contract(contractAddress, erc20Abi, signer);
   const transfertAmount = BigNumber.from(`${amount}`);
-  const transaction = await contract.transfer(receiverAddress, transfertAmount);
-  const { transactionHash } = await transaction.wait(1);
-  return transactionHash;
+  const { hash } = await contract.transfer(receiverAddress, transfertAmount);
+  return hash;
 };
