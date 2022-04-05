@@ -6,7 +6,7 @@ import ERC20Abi from '../constants/erc20_abi.constants';
  * @description Get the infos of an ERC20 token contract
  * @param contractAddress string containing ERC20 hash address
  * @param provider corresponding window.ethereum metamask provider (only metamask suported yet)
- * @returns {ERC20ContractInfos} promise containing symbol, decimals and balance
+ * @returns ERC20ContractInfos promise containing symbol, decimals and balance
  */
 export const getERC20ContractInfos = async (
   contractAddress: string,
