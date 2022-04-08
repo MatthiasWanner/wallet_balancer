@@ -1,6 +1,6 @@
 import { Contract, providers } from 'ethers';
 
-declare module '@dc_tools/web3_utils';
+declare module '@matthias_wanner/web3_utils';
 
 export interface IContractInfos {
   symbol: string;
