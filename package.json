@@ -1,6 +1,6 @@
 {
-  "name": "@dc_tools/web3_utils",
-  "version": "0.0.1",
+  "name": "@matthias_wanner/web3_utils",
+  "version": "0.0.2",
   "description": "Package to interact with ERC20 and ERC21 contracts using ethers.js",
   "main": "./dist/index.js",
   "author": "Matthias Wanner",
@@ -10,10 +10,10 @@
     "dist",
     "types"
   ],
-  "homepage": "",
+  "homepage": "https://github.com/MatthiasWanner/web3_utils",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/MatthiasWanner/web3_utils"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
