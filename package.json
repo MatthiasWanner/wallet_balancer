@@ -1,6 +1,6 @@
 {
   "name": "@matthias_wanner/web3_utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Package to interact with ERC20 and ERC21 contracts using ethers.js",
   "main": "./dist/index.js",
   "author": "Matthias Wanner",
